@@ -39,13 +39,21 @@ Submit a new Beta Build to Crashlytics Beta
 
 Deploy a new version to the Google Play
 
-### android assemble
+### android hard_deploy
 
 ```sh
-[bundle exec] fastlane android assemble
+[bundle exec] fastlane android hard_deploy
 ```
 
 Assemble the release build
+
+### android appcenter_upload
+
+```sh
+[bundle exec] fastlane android appcenter_upload
+```
+
+Upload to app center
 
 ----
 
