@@ -46,8 +46,8 @@ platform :android do
   lane :upload_to_app_center do
     appcenter_upload(
       api_token: "b1e80be5f29b4e9bf8ede6e114affe3679ed7f01",
-      owner_name: "thomasn-bam.tech" # User name as it appears in the URL
-      owner_type: "user", # Default is user - set to organization for appcenter organizations
+      owner_name: "thomasn-bam.tech", # User name as it appears in the URL
+      owner_type: "user",
       app_name: "qweAndroid", # The name of the app as it appears in the URL
       file: "app/build/outputs/apk/release/app-release.apk", # Path to the APK file to upload
     )
