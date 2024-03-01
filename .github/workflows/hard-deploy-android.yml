@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+name: Build Android Release App
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4.0.0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.0' # Not needed with a .ruby-version file
+          bundler-cache: true
+      - uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - run: bundle exec fastlane android hard_deploy
+        shell: bash
